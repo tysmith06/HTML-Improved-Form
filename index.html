@@ -14,18 +14,20 @@
         <h2>Vacation Contest Sign-Up Form</h2>
         <form method="GET" action="results.html">
             <div>
-                <label for="firstname">Your First Name</label>
-                <span class="required-field">*</span>
+                <label for="firstname">Your First Name<span class="required-field">*</span></label>
                 <input minlength="2" maxlength="35" type="text" id="firstname" name="firstname">
-                <label for="lastname">Your Last Name</label>
-                <span class="required-field">*</span>
+                <label for="lastname">Your Last Name<span class="required-field">*</span></label>
                 <input minlength="2" maxlength="35" type="text" id="lastname" name="lastname">
+                <label for="age">Your Age</label>
+                <input type="number" name="age" id="age" min="21" max="120">
+                <h5>Contestants must be aged 21 or older to enter.</h5>
+                <label for="password">Your Secret Code<span class="required-field">*</span></label>
+                <input type="password" boolean="required" title="6 Alphanumeric Character Passcode." pattern="[0-9A-Za-z]{6}">
             </div>
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <div>
-                    <label for="email">Your Email</label>
-                    <span class="required-field">*</span>
+                    <label for="email">Your Email<span class="required-field">*</span></label>
                     <input type="email" id="email" name="email">
                 </div>
                 <div>
@@ -89,7 +91,7 @@
                         <option value="WY">Wyoming</option>
                     </datalist>
                     <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
+                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US Zip Code">
                 </div>
             </fieldset>
 
